@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.wrapper {
+  min-height: 100vh;
+  box-shadow: 0 8px 50px -7px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.calculator {
+  background: grey;
+  width: 400px;
+  display: grid;
+  padding: 0.2rem;
+  gap: 0.2rem;
+  grid-template-areas:
+    'display display display display'
+    'clear backspace percent divide'
+    'no-7 no-8 no-9 multiply '
+    'no-4 no-5 no-6 minus'
+    'no-1 no-2 no-3 add'
+    'no-0 dot equal equal';
+}
+
+.calculator :not(:first-child):hover {
+  background: #d3eaf2;
+  color: black;
+  cursor: pointer;
+}
+
+.calculator div {
+  height: 70px;
+  background: #145369;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display {
+  grid-area: display;
+  justify-content: flex-end !important;
+  font-size: 2.5rem;
+  border: 1px solid;
+  line-height: 3rem;
+}
+
+.no-1 {
+  grid-area: no-1;
+}
+.no-2 {
+  grid-area: no-2;
+}
+.no-0 {
+  grid-area: no-0;
+}
+.no-3 {
+  grid-area: no-3;
+}
+.no-4 {
+  grid-area: no-4;
+}
+.no-5 {
+  grid-area: no-5;
+}
+.no-6 {
+  grid-area: no-6;
+}
+.no-7 {
+  grid-area: no-7;
+}
+.no-8 {
+  grid-area: no-8;
+}
+.no-9 {
+  grid-area: no-9;
+}
+.dot {
+  grid-area: dot;
+}
+
+.multiply {
+  grid-area: multiply;
+}
+
+.divide {
+  grid-area: divide;
+}
+
+.minus {
+  grid-area: minus;
+}
+.add {
+  grid-area: add;
+}
+.equal {
+  grid-area: equal;
+  font-size: 2rem;
+}
+.percent {
+  grid-area: percent;
+}
+.clear {
+  grid-area: clear;
+}
+
+.backspace {
+  grid-area: backspace;
+}
