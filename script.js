@@ -64,6 +64,25 @@ btns.forEach((btn) => {
       return displayTotal(stringToDisplay);
     }
 
+    // . conditions
+    if (clickedButton === '.') {
+      //1. Last operator clickeda
+
+      const indexOfLastOperator = stringToDisplay.lastIndexOf(latestOperator);
+
+      console.log(indexOfLastOperator);
+
+      const lastNumberSet = stringToDisplay.slice(indexOfLastOperator);
+
+      if (lastNumberSet.includes('.')) {
+        return;
+      }
+      //2. No operator
+
+      if (!latestOperator && stringToDisplay.includes('.')) {
+        return;
+      }
+    }
     // A funciton that handles the display of clicked number in display
     stringToDisplay = stringToDisplay + clickedButton;
     displayResult(stringToDisplay);
@@ -93,7 +112,14 @@ const sendRandom = () => {
   return randomNumber < 3 ? randomNumber : 0;
 };
 
-//6. To control . and = operator
+// // reversing name on click
+// const myName = document.getElementById('myname');
+// myName.addEventListener('click', () => {
+//   const text = myName.innerText;
 
-//7. Create a function to calculate total
-//8. Create function that handles the displ`
+//   let reverseName = '';
+//   for (let i = text.length - 1; i >= 0; i--) {
+//     reverseName += text[i];
+//   }
+//   myName.innerText = reverseName;
+// });
